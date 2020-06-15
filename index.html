@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Ta-Te-Ti</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="utils/functions.js"></script>
+  <script defer src="src/index.js"></script>
+</head>
+
+<body>
+  <div class="myModal">
+    <form class="players">
+      <label for="jugador1">Jugador N°1 X</label>
+      <input id="jugador1" type="text"></input>
+      <label for="jugador2">Jugador N°2 O</label>
+      <input id="jugador2" type="text">
+      <button type=´submit id="start">Comenzar a jugar</button>
+    </form>
+  </div>
+  <div class="container">
+    <div class="col">
+      <h1>Ta Te Ti</h1>
+      <div class="container-box">
+        <div id="0" class="box">
+          <div id="line-h-1" class="box-win-h invisible"></div>
+          <div id="line-v-1" class="box-win-v invisible"></div>
+          <div id="line-iztode" class="box-win-d-iz invisible"></div>
+          <div id="line-detoiz" class="box-win-d-der invisible"></div>
+        </div>
+        <div id="1" class="box">
+          <div id="line-v-2" class="box-win-v invisible"></div>
+        </div>
+        <div id="2" class="box">
+          <div id="line-v-3" class="box-win-v invisible"></div>
+        </div>
+      </div>
+      <div class="container-box">
+        <div id="3" class="box">
+          <div id="line-h-2" class="box-win-h invisible"></div>
+        </div>
+        <div id="4" class="box"></div>
+        <div id="5" class="box"></div>
+      </div>
+      <div class="container-box">
+        <div id="6" class="box">
+          <div id="line-h-3" class="box-win-h invisible"></div>
+        </div>
+        <div id="7" class="box"></div>
+        <div id="8" class="box"></div>
+      </div>
+    </div>
+    <div class="col2">
+      <table class="jugadores">
+        <thead>
+          <tr>
+            <th>Jugadores</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="player1">---</td>
+          </tr>
+          <tr>
+            <td id="player2">---</td>
+          </tr>
+        </tbody>
+
+      </table>
+      <div id="msg">
+        <p id="winner" class="invisible">Ganaste!</p>
+        <div id="draw" class="invisible">Empate!</div>
+        <button id="reset" class="invisible">Volver a Jugar</button>
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+</html>

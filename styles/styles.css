@@ -1,0 +1,199 @@
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(Roboto-Regular.ttf);
+}
+
+.container {
+  display: flex;
+  margin: auto;
+}
+
+.col {
+  justify-content: center;
+  margin: 40px 30px auto auto;
+}
+
+.col2 {
+ margin: 65px auto 20px 30px;
+}
+
+#msg {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: Roboto-Regular;
+  text-align: center;
+}
+
+.box {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0.5em;
+  background-size: cover;
+  margin: 2px;
+}
+
+.circle, .cross {
+  background-image: url('../img/tic.png');
+}
+
+.cross {
+  background-position: 100%;
+}
+
+.box-win-h {
+  width: 600px;
+  height: 180px;
+  background: url(/img/LineH.png);
+  position: relative;
+  animation: mymoveh 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes mymoveh {
+  0% {
+    width: 0px;
+    height: 180px;
+    background: url(/img/LineH.png);
+  }
+  100% {
+    width: 600px;
+    height: 180px;
+    background: url(/img/LineH.png);
+  }
+}
+
+.box-win-v {
+  width: 180px;
+  height: 600px;
+  background: url(/img/LineV.png);
+  position: relative;
+  animation: mymovev 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes mymovev {
+  0% {
+    width: 180px;
+    height: 0px;
+    background: url(/img/LineV.png);
+  }
+  100% {
+    width: 180px;
+    height: 600px;
+    background: url(/img/LineV.png);
+  }
+}
+
+.box-win-d-iz {
+  width: 600px;
+  height: 600px;
+  background: url(/img/LineD-iztode.png);
+  position: relative;
+  animation: mymoved-iz 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes mymoved-iz {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: url(/img/LineD-iztode.png);
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    background: url(/img/LineD-iztode.png);
+  }
+}
+
+.box-win-d-der {
+  width: 600px;
+  height: 600px;
+  background: url(/img/LineD-detoiz.png);
+  position: relative;
+  animation: mymoved-der 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes mymoved-der {
+  0% {
+    width: 0px;
+    height: 600px;
+    background: url(/img/LineD-detoiz.png);
+  }
+  100% {
+    width: 600px;
+    height: 600px;
+    background: url(/img/LineD-detoiz.png);
+  }
+}
+
+.myModal {
+  display: flex;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.jugadores {
+  font-family: Roboto-Regular;
+  border: 2px solid black;
+  background-color: grey;
+  width: 300px;
+  height: 150px;
+  margin: 60px 0;
+  text-align: left;
+  padding: 7px;
+}
+
+.jugadores td, th {
+  padding: 5px;
+}
+
+.players input, label {
+  margin: 2px;
+}
+
+.players button {
+  margin: 10px;
+}
+
+.invisible {
+  display: none;
+}
+
+.turno {
+  border: 1px solid black;
+  background-color: green;
+}
