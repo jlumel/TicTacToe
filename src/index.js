@@ -31,22 +31,22 @@ boxes.click(function () {
         if (checkWinner(lista_cross)) {
             player1.removeClass('turno')
             player2.removeClass('turno')
-            winnermsg.removeClass('invisible')
-            resetbtn.removeClass('invisible')
+            winnermsg.show()
+            resetbtn.show()
             winnermsg.text('Ganó ' + player1.text().substring(3) + '!')
 
         } else if (checkWinner(lista_circle)) {
             player1.removeClass('turno')
             player2.removeClass('turno')
-            winnermsg.removeClass('invisible')
-            resetbtn.removeClass('invisible')
+            winnermsg.show()
+            resetbtn.show()
             winnermsg.text('Ganó ' + player2.text().substring(3) + '!')
         }
 
 
         if (click === 10 && !winner) {
-            resetbtn.removeClass('invisible')
-            draw.removeClass('invisible')
+            resetbtn.show()
+            draw.show()
             player1.removeClass('turno')
             player2.removeClass('turno')
         }
@@ -61,7 +61,7 @@ resetbtn.click(function () {
 startbtn.click(function (e) {
     e.preventDefault()
     if (jugador1.val().length > 0 && jugador2.val().length > 0) {
-        modal.addClass('invisible')
+        modal.hide()
         player1.text('X- ' + jugador1.val())
         player2.text('O- ' + jugador2.val())
         player1.addClass('turno')
