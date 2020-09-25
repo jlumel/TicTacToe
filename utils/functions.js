@@ -1,7 +1,3 @@
-function initModal() {
-
-}
-
 function checkWinner(lista) {
 
     if (lista.includes("0") && lista.includes("1") && lista.includes("2")) {
